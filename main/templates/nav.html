@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/create-photo" class="nav-link">Photo</a>
+      </li>
+      <li class="nav-item"><a href="/create-post" class="nav-link">Post</a></li>
+    </ul>
+    <ul class="navbar-nav">
+      {% if user.is_authenticated %}
+
+      <li class="navbar-text">logged in as: {{user.username}} |</li>
+      <li class="nav-item">
+        <a href="/accounts/logout" class="nav-link">Logout</a>
+      </li>
+
+      {% else %}
+      <li class="nav-item">
+        <a href="/accounts/login" class="nav-link">Login</a>
+      </li>
+      {%endif%}
+    </ul>
+  </div>
+</nav>

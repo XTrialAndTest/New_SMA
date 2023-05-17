@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% load django_bootstrap5%}
+
+<!-- crispy forms -->
+{% load crispy_forms_tags %}
+<!-- forms -->
+{%block content %}
+<form action="" method="post">
+  {% csrf_token %} {% bootstrap_form form %}
+  <input type="submit" name="Post" id="" class="btn btn-success" />
+</form>
+
+{%endblock%}
