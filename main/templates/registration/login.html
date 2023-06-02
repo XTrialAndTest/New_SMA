@@ -7,7 +7,7 @@
   {% csrf_token %} {{form|crispy}}
   <p>
     DO YOU HAVE ACCOUNT? CREATE
-    <a href="/accounts/sign-up" class="btn btn-primary">HERE</a>
+    <a href="{% url 'sign-up' %}" class="btn btn-primary">HERE</a>
   </p>
   <input type="submit" name="login" id="" class="btn btn-success" />
 </form>

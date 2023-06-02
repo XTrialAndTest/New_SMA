@@ -7,7 +7,7 @@
   {% csrf_token %} {{form|crispy}}
   <p>
     HAVE ACCOUNT? LOGIN
-    <a href="/accounts/login" class="btn btn-primary">HERE</a>
+    <a href="{% url 'login' %}" class="btn btn-primary">HERE</a>
   </p>
   <button type="submit" id="" class="btn btn-success">Register</button>
 </form>

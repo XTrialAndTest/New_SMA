@@ -12,17 +12,16 @@ class RegisterForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['firstname', 'lastname', 'username',
-                  'email', 'password1', 'password2',]
+        fields = ['first_name', 'last_name', 'username', 'email']
 
 
-class Post(forms.ModelForm):
+class PostForm(forms.ModelForm):
     class Meta:
-        model = Post
+        model = PostModel
         fields = ['title', 'description']
 
 
-class Photo(forms.ModelForm):
+class PhotoForm(forms.ModelForm):
     class Meta:
-        model = Photo
+        model = PhotoModel
         fields = ['title', 'photo', 'caption']
